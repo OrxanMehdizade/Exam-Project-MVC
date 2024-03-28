@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<ExamProjectCheck.Models.Entity.Exam>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>İmtihan Fəni</th>
+            <th>GPA</th>
+            <th>Toplam Puan</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var exam in Model)
+        {
+            <tr>
+                <td>@exam.Name</td>
+                <td>@exam.GPA</td>
+                <td>@exam.TotalScore</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div style="margin:0 auto; width:150px;">
+    <a class="btn-outline-secondary" asp-area="" asp-controller="Exam" asp-action="AddExam">Imthan əlavə et</a>
+</div>

@@ -1,0 +1,33 @@
+﻿@model ExamModelss
+
+<h1>Add New Exam</h1>
+
+<form asp-action="AddExam" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Total Class Hours</label>
+        <input type="number" name="TotalClassHours" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Missed Classes</label>
+        <input type="number" name="MissedClasses" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Midterm 1 Score</label>
+        <input type="number" name="Midterm1" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Midterm 2 Score</label>
+        <input type="number" name="Midterm2" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Midterm 3 Score</label>
+        <input type="number" name="Midterm3" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Add Exam</button>
+</form>

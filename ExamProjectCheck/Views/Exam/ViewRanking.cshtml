@@ -1,0 +1,21 @@
+﻿@model List<ExamProjectCheck.Models.Entity.AppUser>
+
+<h1>User Ranking</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>User Name</th>
+            <th>Average Exam Score</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.FullName</td>
+                <td>@user.Exams.Average(e => e.TotalScore)</td>
+            </tr>
+        }
+    </tbody>
+</table>
